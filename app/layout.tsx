@@ -1,10 +1,11 @@
-import { Geist, Geist_Mono, Lora } from "next/font/google"
+import { Geist, Geist_Mono, Lora } from "next/font/google";
 
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ActiveThemeProvider } from "@/components/active-theme";
+import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const lora = Lora({subsets:['latin'],variable:'--font-serif'});
+const lora = Lora({ subsets: ['latin'], variable: '--font-serif' });
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -28,7 +29,12 @@ export default function RootLayout({
       className={cn("antialiased", fontSans.variable, fontMono.variable, "font-serif", lora.variable)}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+
+        <ThemeProvider>
+          <ActiveThemeProvider>
+            {children}
+          </ActiveThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
