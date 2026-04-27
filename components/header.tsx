@@ -31,7 +31,7 @@ export function Header() {
                 >
                     {/* <Logo className="h-4" /> */} Logo
                 </a>
-                <div className="hidden items-center gap-2 md:flex">
+                <div className="flex items-center gap-2">
                     <ModeToggle />
                     <ThemeSelector />
                     {/* Search input */}
