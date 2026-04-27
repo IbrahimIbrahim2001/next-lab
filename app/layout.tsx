@@ -4,6 +4,7 @@ import { ActiveThemeProvider } from "@/components/active-theme";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 const lora = Lora({ subsets: ['latin'], variable: '--font-serif' });
 
@@ -32,7 +33,12 @@ export default function RootLayout({
 
         <ThemeProvider>
           <ActiveThemeProvider>
-            {children}
+            <main className="min-h-screen max-w-4xl mx-auto">
+              <Header />
+              <div className="md:px-2">
+                {children}
+              </div>
+            </main>
           </ActiveThemeProvider>
         </ThemeProvider>
       </body>
