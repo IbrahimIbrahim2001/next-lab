@@ -1,18 +1,21 @@
-import { Button } from "@/components/ui/button"
+import FeaturesCard from "@/components/features-card";
+import { features } from "@/lib/constants";
 
 export default function Page() {
   return (
     <div className="flex p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+      <div className="flex max-w-md min-w-0 flex-col gap-4 space-y-2 text-sm leading-loose">
+        <div className="space-y-2">
+          <h1 className="text-3xl font-semibold">
+            Feature Setup
+          </h1>
+          <p className="text-md text-muted-foreground">
+            Start building by adding components to your project.
+          </p>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+        {features.map((feature) => (
+          <FeaturesCard key={feature.name} feature={feature} />
+        ))}
       </div>
     </div>
   )
