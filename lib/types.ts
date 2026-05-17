@@ -1,5 +1,5 @@
 export interface Feature {
-    name: string;
-    description: string;
+    titleKey: string;
+    descriptionKey: string;
     href: string;
 }

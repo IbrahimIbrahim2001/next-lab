@@ -1,3 +1,38 @@
 {
-    "hello": "مرحبا بالعالم"
+    "homePage": {
+        "title": "Feature Setup",
+        "description": "Start building by adding components to your project."
+    },
+    "instructionLayout": {
+        "description": "This will soon be published as reusable npm packages — no more manual file copying.",
+        "back": "Back"
+    },
+    "features": {
+        "themeInstructions": {
+            "title": "Theme Instructions",
+            "description": "Learn how to customize and apply themes."
+        }
+    },
+    "ThemeInstructionPage": {
+        "title": "Theme Setup",
+        "description": "Add a customizable theme system to your project. This setup allows dynamic theme switching using CSS variables and context.",
+        "steps": {
+            "addDefinitions": {
+                "title": "Add theme definitions",
+                "description": "Copy <code>themes.ts</code> into your <code>/lib</code> folder. This file contains all theme tokens and utilities."
+            },
+            "providers": {
+                "title": "Add theme providers",
+                "description": "Copy the following files into your <code>/components</code> directory:"
+            },
+            "wrap": {
+                "title": "Wrap your application",
+                "description": "In your root layout, wrap your app with both providers:"
+            },
+            "selector": {
+                "title": "Use the theme selector",
+                "description": "Place the <code>ThemeSelector</code> anywhere in your UI to allow users to switch themes."
+            }
+        }
+    }
 }

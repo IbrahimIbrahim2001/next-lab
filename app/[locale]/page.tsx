@@ -1,20 +1,22 @@
 import FeaturesCard from "@/components/features-card";
 import { features } from "@/lib/constants";
+import { useTranslations } from "next-intl";
 
-export default function Page() {
+export default function HomePage() {
+  const t = useTranslations("homePage");
   return (
     <div className="flex p-6">
       <div className="flex min-w-0 flex-col gap-4 space-y-2 text-sm leading-loose">
         <div className="space-y-2">
           <h1 className="text-3xl font-semibold">
-            Feature Setup
+            {t("title")}
           </h1>
           <p className="text-md text-muted-foreground">
-            Start building by adding components to your project.
+            {t("description")}
           </p>
         </div>
         {features.map((feature) => (
-          <FeaturesCard key={feature.name} feature={feature} />
+          <FeaturesCard key={feature.titleKey} feature={feature} />
         ))}
       </div>
     </div>
