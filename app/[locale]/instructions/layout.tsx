@@ -1,7 +1,7 @@
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
 
 export default function InstructionsLayout({
     children

@@ -3,7 +3,9 @@ import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeSelector } from "@/components/theme-selector"
-import Link from "next/link";
+
+import { LanguageSwitcher } from "./language-switcher";
+import { Link } from "@/i18n/navigation";
 
 export function Header() {
     const scrolled = useScroll(10);
@@ -33,6 +35,7 @@ export function Header() {
                     {/* <Logo className="h-4" /> */} Logo
                 </Link>
                 <div className="flex items-center gap-2">
+                    <LanguageSwitcher />
                     <ModeToggle />
                     <ThemeSelector />
                     {/* Search input */}

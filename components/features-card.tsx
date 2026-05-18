@@ -1,8 +1,11 @@
+"use client";
+
+import { Link } from "@/i18n/navigation";
 import { Feature } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+
 
 interface FeaturesCardProps {
     feature: Feature
