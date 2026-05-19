@@ -1,15 +1,15 @@
 "use client";
-import { useLocale } from "next-intl";
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuTrigger,
     DropdownMenuRadioGroup,
     DropdownMenuRadioItem,
+    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "./ui/button";
-import { IconGlobe } from "@tabler/icons-react";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { IconWorld } from "@tabler/icons-react";
+import { useLocale } from "next-intl";
+import { Button } from "./ui/button";
 const LANGUAGES = [
     { value: "ar", label: "العربية" },
     { value: "en", label: "English" },
@@ -28,11 +28,11 @@ export function LanguageSwitcher() {
         <DropdownMenu>
             <DropdownMenuTrigger render={
                 <Button
-                    variant="ghost"
+                    variant="outline"
                     size="icon"
                     className="bg-white text-black hover:bg-gray-100"
                 >
-                    <IconGlobe className="size-5" />
+                    <IconWorld className="size-[1.2rem] dark:text-white" />
                 </Button>
             } />
 
