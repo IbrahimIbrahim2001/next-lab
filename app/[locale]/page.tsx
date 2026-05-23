@@ -15,9 +15,11 @@ export default function HomePage() {
             {t("description")}
           </p>
         </div>
-        {features.map((feature) => (
-          <FeaturesCard key={feature.titleKey} feature={feature} />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-4">
+          {features.map((feature) => (
+            <FeaturesCard key={feature.titleKey} feature={feature} />
+          ))}
+        </div>
       </div>
     </div>
   )

@@ -11,6 +11,10 @@
         "themeInstructions": {
             "title": "تعليمات الثيمات",
             "description": "تعلّم كيفية تخصيص وتطبيق الثيمات."
+        },
+        "firebaseMessaging": {
+            "title": "Firebase للمراسلة والإشعارات",
+            "description": "إعداد المراسلة الفورية والإشعارات باستخدام Firebase."
         }
     },
     "ThemeInstructionPage": {

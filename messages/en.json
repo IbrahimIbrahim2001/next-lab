@@ -11,6 +11,10 @@
         "themeInstructions": {
             "title": "Theme Instructions",
             "description": "Learn how to customize and apply themes."
+        },
+        "firebaseMessaging": {
+            "title": "Firebase Messaging & Notifications",
+            "description": "Set up real-time messaging and push notifications with Firebase."
         }
     },
     "ThemeInstructionPage": {
